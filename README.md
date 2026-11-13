@@ -204,6 +204,7 @@ With another week: first run and compare actual models on independently authored
 
 An AI coding assistant (Copilot SDK in VS Code) was used to inspect and edit the implementation, tests and documentation, run the offline suite, operate the local Ollama model, evaluate its outputs, and prepare reproducible examples. The supplied assignment and fixtures were visible during this work and informed fixes. The live Ollama result is real local inference, but the evaluation is not blind. A user-configured API key was used for hosted access checks and failed smoke attempts; no key is included in source, examples, or this repository. Hosted billing was not queried. The applicant should personally review the code and results before submitting.
 
-## Submission
+## Assignment
 
-Submit the GitHub repository link requested by JEEVIT. Keep `data/`, `eval/`, `tests/`, `examples/`, docs, `.env.example`, and the package. Exclude `.env`, virtual environments and private runtime data. This archive is a complete local source project, not an already-published repository. The original task is retained as `TASK.md`.
+Built for JEEVIT’s Founding AI Engineer assignment.
+The original requirements are available in [TASK.md](TASK.md).
