@@ -104,16 +104,25 @@ Exit codes: `0` successful command; `1` partial processing or failed strict eval
 
 ## Design: where AI helps, where code must be right
 
+The diagram follows the verified Ollama `qwen2.5:3b` run. The same validation, grouping and deterministic policy stages are used with the offline rules extractor and experimental hosted API.
+
 ```mermaid
 flowchart TD
-    I[Inbox and creator profile] --> S[Validate inputs and security signals]
-    S --> E[Selected extractor: rules, local Ollama, or hosted API]
-    E --> V[Validate schema and exact source quotes]
-    V --> G[Conservative campaign grouping]
-    G --> P[Latest terms and deterministic policy]
-    P --> O[JSON, Markdown and review-only drafts]
-    E -->|Failure| X[Visible processing errors]
+    I[Input emails and creator profile] --> V[Validate inputs]
+    V --> S{Suspicious instructions or security signals?}
+    S -->|Detected| F[Flag for review; skip AI extraction]
+    S -->|Not detected| M[Ollama: qwen2.5:3b<br/>Extract deal facts and source quotes]
+    M --> C[Validate structure and source evidence]
+    C -->|Invalid| R[Bounded repair attempt]
+    R --> C
+    C -->|Retries exhausted| X[Record processing failure<br/>Flag potentially outdated terms]
+    F --> G[Group related emails<br/>Resolve latest terms and retain history]
+    C -->|Valid| G
+    G --> P[Apply deterministic checks<br/>Rates, dates, exclusivity, content rules and usage rights]
+    P --> A[Recommend next action<br/>Generate a reply draft where appropriate]
+    A --> O[Review report: HTML, Markdown and JSON]
     X --> O
+    O --> H[Creator reviews recommendation<br/>Nothing is sent automatically]
 ```
 
 **The model** interprets language and proposes structured facts: advertiser, deliverables, cash/gifting, dates, rights and campaign references. This helps with paraphrases and multilingual input that a grammar misses. It never selects final actions or writes free-form replies.
