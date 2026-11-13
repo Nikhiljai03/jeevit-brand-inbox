@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "prompt_version": "extract-v2",
+    "analysis_date": "2026-11-12",
+    "mode": "api_live",
+    "provider": "api",
+    "model": "gemini-3.5-flash-lite",
+    "configured_model": "gemini-3.5-flash-lite",
+    "structured_output_mode": "json_object",
+    "status": "partial",
+    "input_sha256": "d247f929533c6032a39341cae027482a9e1c1031c985cb22dfb167e86196656b",
+    "emails_total": 2,
+    "processed": 0,
+    "elapsed_seconds": 20.693517,
+    "model_calls": 6,
+    "model_retries": 4,
+    "input_tokens": 3186,
+    "output_tokens": 1791,
+    "model_reconciliations": 0,
+    "unresolved_campaign_updates": [
+      "N-02"
+    ],
+    "api_cost_usd": null,
+    "cost_note": "Hosted API billing is not queried; cost is unknown and no price estimate is included.",
+    "nothing_sent": true
+  },
+  "emails": [
+    {
+      "email_id": "N-01",
+      "email": {
+        "id": "N-01",
+        "received_at": "2026-11-12 10:00",
+        "from": "collabs@deskcraft.example",
+        "subject": "DeskCraft desk campaign",
+        "body": "Hi Riya, we're DeskCraft, a desk accessories brand. We offer INR 50,000 for 1 Instagram reel by 25 November 2026, with 3 months paid usage and payment within 15 days."
+      },
+      "status": "error",
+      "error": "API extraction failed: response schema: missing or incorrectly typed value; return concise schema-valid JSON.",
+      "facts": null,
+      "evidence": {},
+      "method": "api",
+      "elapsed_ms": 7289.672,
+      "category": null,
+      "deal_id": null
+    },
+    {
+      "email_id": "N-02",
+      "email": {
+        "id": "N-02",
+        "received_at": "2026-11-12 11:00",
+        "from": "collabs@deskcraft.example",
+        "subject": "Re: DeskCraft desk campaign",
+        "body": "Following up on our earlier offer: our revised budget is INR 35,000 for the same deliverables. Everything else remains unchanged."
+      },
+      "status": "error",
+      "error": "API extraction failed: response schema: missing or incorrectly typed value; return concise schema-valid JSON.",
+      "facts": null,
+      "evidence": {},
+      "method": "api",
+      "elapsed_ms": 13403.098,
+      "could_be_campaign_update": true,
+      "category": null,
+      "deal_id": null
+    }
+  ],
+  "deals": []
+}

@@ -1,0 +1,37 @@
+{
+  "authorship": "Authored from TASK.md and supplied emails before pipeline implementation. Development set, not blind generalization evidence.",
+  "category_policy": "Concrete paid or barter proposals remain deal_offer even if below rate, missing secondary terms, or expired. Explicit creator-policy conflicts are not_a_fit. Scam-like pay-to-join is scam_or_phishing. E-02 inherits campaign scope for its final category, but its original extracted facts remain partial.",
+  "emails": [
+    {"id":"E-01","category":"deal_offer","fields":{"brand":"Dew Lab","cash_amount":120000,"currency":"INR","payment_type":"cash","deliverables":[{"kind":"instagram_reel","quantity":2},{"kind":"instagram_story","quantity":3}],"usage_months":3}},
+    {"id":"E-02","category":"deal_offer","fields":{"cash_amount":100000,"currency":"INR"}},
+    {"id":"E-03","category":"scam_or_phishing","fields":{"joining_fee":2999,"cash_amount":null}},
+    {"id":"E-04","category":"not_a_fit","fields":{"cash_amount":1200,"currency":"USD","product_category":"smartphones","deadline":"2026-12-10"}},
+    {"id":"E-05","category":"not_a_fit","fields":{"cash_amount":300000,"product_category":"fantasy_sports"}},
+    {"id":"E-06","category":"deal_offer","fields":{"brand":"Chai & Co","cash_amount":25000,"currency":"INR","deliverables":[{"kind":"instagram_reel","quantity":1}]}},
+    {"id":"E-07","category":"scam_or_phishing","fields":{"cash_amount":null,"security_signals":["prompt_injection"]}},
+    {"id":"E-08","category":"needs_more_info","fields":{"brand":"Urban Thread","cash_amount":null,"deliverables":[]}},
+    {"id":"E-09","category":"deal_offer","fields":{"gift_value":3500,"cash_amount":null,"payment_type":"gifting","deliverables":[{"kind":"instagram_reel","quantity":1},{"kind":"instagram_story","quantity":2}],"relative_deadline":"within 2 weeks of delivery"}},
+    {"id":"E-10","category":"deal_offer","fields":{"cash_amount":800,"currency":"USD","perpetual_usage":true,"whitelisting":true,"deadline":"2026-11-30"}},
+    {"id":"E-11","category":"deal_offer","fields":{"brand":"Dew Lab","cash_amount":100000,"usage_months":3}},
+    {"id":"E-12","category":"deal_offer","fields":{"cash_amount":45000,"deadline":"2026-11-01"}},
+    {"id":"E-13","category":"spam","fields":{"newsletter":true}},
+    {"id":"E-14","category":"scam_or_phishing","fields":{"security_signals":["suspected_phishing"]}},
+    {"id":"E-15","category":"needs_more_info","fields":{"attachment_missing":true,"cash_amount":null,"deliverables":[]}}
+  ],
+  "groups": [["E-01","E-02","E-11"],["E-03"],["E-04"],["E-05"],["E-06"],["E-07"],["E-08"],["E-09"],["E-10"],["E-12"],["E-13"],["E-14"],["E-15"]],
+  "deals": [
+    {"members":["E-01","E-02","E-11"],"action":"negotiate","risks":["below_rate"],"fields":{"cash_amount":100000,"baseline_inr":110000,"shortfall_inr":10000}},
+    {"members":["E-03"],"action":"report","risks":["pay_to_join"]},
+    {"members":["E-04"],"action":"decline","risks":["exclusivity_conflict"],"fields":{"cash_inr":100800}},
+    {"members":["E-05"],"action":"decline","risks":["prohibited_category"]},
+    {"members":["E-06"],"action":"negotiate","risks":["below_rate"],"fields":{"baseline_inr":40000}},
+    {"members":["E-07"],"action":"report","risks":["prompt_injection"],"draft_is_null":true},
+    {"members":["E-08"],"action":"ask for details","risks":["missing_terms"]},
+    {"members":["E-09"],"action":"negotiate","risks":["gifting_only"],"fields":{"baseline_inr":60000}},
+    {"members":["E-10"],"action":"negotiate","risks":["extended_usage","whitelisting"],"fields":{"cash_inr":67200}},
+    {"members":["E-12"],"action":"ask for details","risks":["expired_deadline"]},
+    {"members":["E-13"],"action":"ignore","risks":[],"draft_is_null":true},
+    {"members":["E-14"],"action":"report","risks":["suspected_phishing"],"draft_is_null":true},
+    {"members":["E-15"],"action":"ask for details","risks":["attachment_unavailable"]}
+  ]
+}

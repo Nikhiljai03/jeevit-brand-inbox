@@ -1,0 +1,60 @@
+{
+  "mode": "ollama_live",
+  "model": "qwen2.5:3b",
+  "coverage": {
+    "processed": 15,
+    "total": 15
+  },
+  "categories": {
+    "correct": 15,
+    "total": 15,
+    "accuracy_all_inputs": 1.0,
+    "accuracy_processed": 1.0
+  },
+  "key_fields": {
+    "correct": 45,
+    "total": 45
+  },
+  "grouping": {
+    "exact_match": true,
+    "correct_groups": 13,
+    "expected_groups": 13,
+    "predicted_groups": 13,
+    "pair_precision": 1.0,
+    "pair_recall": 1.0
+  },
+  "deal_checks": {
+    "passed": 36,
+    "total": 36
+  },
+  "confusion_matrix": [
+    {
+      "expected": "deal_offer",
+      "predicted": "deal_offer",
+      "count": 7
+    },
+    {
+      "expected": "needs_more_info",
+      "predicted": "needs_more_info",
+      "count": 2
+    },
+    {
+      "expected": "not_a_fit",
+      "predicted": "not_a_fit",
+      "count": 2
+    },
+    {
+      "expected": "scam_or_phishing",
+      "predicted": "scam_or_phishing",
+      "count": 3
+    },
+    {
+      "expected": "spam",
+      "predicted": "spam",
+      "count": 1
+    }
+  ],
+  "mismatches": [],
+  "interpretation": "Development fixture accuracy, not blind generalization. No live-model claim for rules_offline.",
+  "normalization": "Numbers compare numerically; strings exact; lists order-insensitive. Risks checked for expected presence. Processing failures count against all-input accuracy."
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "rules_offline",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "runs": 20,
+  "emails_per_run": 15,
+  "median_seconds_per_inbox": 0.002972621499793604,
+  "median_ms_per_email": 0.19817476665290693,
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "scope": "In-memory pipeline only. Excludes file IO, CLI startup, local electricity and any live inference."
+}

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jeevit-brand-inbox"
+version = "1.0.0"
+description = "Evidence-backed creator deal triage with offline rules and optional local or hosted AI"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+brand-inbox = "brand_inbox.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["brand_inbox*"]

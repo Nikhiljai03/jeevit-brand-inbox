@@ -1,0 +1,97 @@
+{
+  "authorship": "Synthetic stress set written after the baseline. Not blind or independent evidence of generalization. Includes natural-language formats outside the rules grammar.",
+  "emails": [
+    {
+      "id": "S-01",
+      "category": "deal_offer",
+      "fields": {
+        "cash_amount": 75000
+      }
+    },
+    {
+      "id": "S-02",
+      "category": "deal_offer",
+      "fields": {
+        "cash_amount": 700,
+        "perpetual_usage": true
+      }
+    },
+    {
+      "id": "S-03",
+      "category": "deal_offer",
+      "fields": {
+        "gift_value": 4500,
+        "cash_amount": null
+      }
+    },
+    {
+      "id": "S-04",
+      "category": "not_a_fit",
+      "fields": {
+        "product_category": "smartphones"
+      }
+    },
+    {
+      "id": "S-05",
+      "category": "scam_or_phishing",
+      "fields": {
+        "cash_amount": null
+      }
+    },
+    {
+      "id": "S-06",
+      "category": "needs_more_info",
+      "fields": {
+        "attachment_missing": true
+      }
+    },
+    {
+      "id": "S-07",
+      "category": "deal_offer",
+      "fields": {
+        "cash_amount": 50000,
+        "currency": "INR"
+      }
+    },
+    {
+      "id": "S-08",
+      "category": "deal_offer",
+      "fields": {
+        "cash_amount": 50000,
+        "deliverables": [
+          {
+            "kind": "instagram_reel",
+            "quantity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "groups": [
+    [
+      "S-01"
+    ],
+    [
+      "S-02"
+    ],
+    [
+      "S-03"
+    ],
+    [
+      "S-04"
+    ],
+    [
+      "S-05"
+    ],
+    [
+      "S-06"
+    ],
+    [
+      "S-07"
+    ],
+    [
+      "S-08"
+    ]
+  ],
+  "deals": []
+}

@@ -1,0 +1,55 @@
+{
+  "mode": "rules_offline",
+  "model": null,
+  "coverage": {
+    "processed": 8,
+    "total": 8
+  },
+  "categories": {
+    "correct": 8,
+    "total": 8,
+    "accuracy_all_inputs": 1.0,
+    "accuracy_processed": 1.0
+  },
+  "key_fields": {
+    "correct": 12,
+    "total": 12
+  },
+  "grouping": {
+    "exact_match": true,
+    "correct_groups": 8,
+    "expected_groups": 8,
+    "predicted_groups": 8,
+    "pair_precision": 1.0,
+    "pair_recall": 1.0
+  },
+  "deal_checks": {
+    "passed": 0,
+    "total": 0
+  },
+  "confusion_matrix": [
+    {
+      "expected": "deal_offer",
+      "predicted": "deal_offer",
+      "count": 5
+    },
+    {
+      "expected": "needs_more_info",
+      "predicted": "needs_more_info",
+      "count": 1
+    },
+    {
+      "expected": "not_a_fit",
+      "predicted": "not_a_fit",
+      "count": 1
+    },
+    {
+      "expected": "scam_or_phishing",
+      "predicted": "scam_or_phishing",
+      "count": 1
+    }
+  ],
+  "mismatches": [],
+  "interpretation": "Development fixture accuracy, not blind generalization. No live-model claim for rules_offline.",
+  "normalization": "Numbers compare numerically; strings exact; lists order-insensitive. Risks checked for expected presence. Processing failures count against all-input accuracy."
+}

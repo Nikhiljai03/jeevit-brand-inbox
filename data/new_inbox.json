@@ -1,0 +1,30 @@
+[
+  {
+    "id": "N-01",
+    "received_at": "2026-11-12 10:00",
+    "from": "collabs@deskcraft.example",
+    "subject": "DeskCraft desk campaign",
+    "body": "Hi Riya, we're DeskCraft, a desk accessories brand. We offer INR 50,000 for 1 Instagram reel by 25 November 2026, with 3 months paid usage and payment within 15 days."
+  },
+  {
+    "id": "N-02",
+    "received_at": "2026-11-12 11:00",
+    "from": "collabs@deskcraft.example",
+    "subject": "Re: DeskCraft desk campaign",
+    "body": "Following up on our earlier offer: our revised budget is INR 35,000 for the same deliverables. Everything else remains unchanged."
+  },
+  {
+    "id": "N-03",
+    "received_at": "2026-11-12 12:00",
+    "from": "hello@freshbottle.example",
+    "subject": "Potential collaboration",
+    "body": "Hi Riya, we're FreshBottle, a reusable bottle brand. We love your content and would like to collaborate. Are you interested?"
+  },
+  {
+    "id": "N-04",
+    "received_at": "2026-11-12 13:00",
+    "from": "campaigns@matchwin.example",
+    "subject": "Fantasy cricket promotion",
+    "body": "Hi Riya, we're MatchWin, a fantasy cricket app. Our budget is INR 90,000 for 1 Instagram reel by 28 November 2026."
+  }
+]
